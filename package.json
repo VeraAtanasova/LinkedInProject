@@ -1,0 +1,21 @@
+{
+  "name": "playwright-codecept",
+  "version": "1.0.0",
+  "description": "**Playwright** is a Node.js library by Microsoft for automating web browsers, offering a high-level API for Chrome, Firefox, and Safari. It enables reliable end-to-end testing, browser automation, and user interaction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "codeceptjs run",
+    "gpo": "codeceptjs gpo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.4.1",
+    "playwright": "^1.31.2",
+    "prettier": "^2.8.4"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
