@@ -4,9 +4,9 @@ const HeaderPage = require('./pageObjects/HeaderPage')
 
 Feature('Navigate LinkedIn Test')
 
- Before(async({ I }) => {
+ Before(({ I }) => {
   console.log('BEFORE HOOK')
-  const tt = I.amOnPage('http://linkedin.com')
+  I.amOnPage('http://linkedin.com')
  }),
 
 
@@ -15,8 +15,9 @@ After(({ I }) => {
 })
 
 Scenario('Navigate Jobs page in LinkedIn', ({ I, LoginPage, HeaderPage, JobsListPage }) => {
-    LoginPage.clickJobsIcon();
-    HeaderPage.findAndPopulateLocationField();
-    JobsListPage.selectFirstJob();
-    JobsListPage.openNewTabCurrentUrl();
+    LoginPage.clickJobsIcon()
+    HeaderPage.findAndPopulateLocationField()
+    JobsListPage.selectFirstJob()
+    JobsListPage.openNewTabCurrentUrl()
+    I.see('Lombardy, Italy')
   })
